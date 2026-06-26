@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакт — Игорь</title>
+  <meta name="description" content="Запишитесь на бесплатную 20-минутную встречу-знакомство. Без обязательств.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="page-hero__eyebrow">Контакт</span>
+    <h1>Начнём с разговора</h1>
+    <p>Бесплатная 20-минутная встреча-знакомство. Без обязательств — просто поговорим.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- LEFT: info -->
+      <div class="contact-info">
+        <h2>Напишите мне</h2>
+        <p>Расскажите в двух словах, что происходит — и мы договоримся о встрече. Отвечаю в течение 24 часов.</p>
+
+        <!-- ЗАМЕНИТЕ ссылку на ваш Telegram -->
+        <a href="https://t.me/ВАШ_TELEGRAM" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link__icon">✈️</span>
+          <div>
+            <div style="font-weight:600;color:var(--ink);">Telegram</div>
+            <div style="font-size:0.85rem;color:var(--muted);">@ВАШ_TELEGRAM · основной канал</div>
+          </div>
+        </a>
+
+        <!-- ЗАМЕНИТЕ ссылку на ваш YouTube -->
+        <a href="https://youtube.com/@ВАШ_КАНАЛ" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link__icon">▶️</span>
+          <div>
+            <div style="font-weight:600;color:var(--ink);">YouTube</div>
+            <div style="font-size:0.85rem;color:var(--muted);">Видео, расклады, разборы</div>
+          </div>
+        </a>
+
+        <!-- ЗАМЕНИТЕ ссылку на вашу страницу ВКонтакте -->
+        <a href="https://vk.com/ВАШ_ПРОФИЛЬ" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link__icon">🔵</span>
+          <div>
+            <div style="font-weight:600;color:var(--ink);">ВКонтакте</div>
+            <div style="font-size:0.85rem;color:var(--muted);">Контент и анонсы</div>
+          </div>
+        </a>
+
+        <div style="margin-top:32px;padding:24px;background:var(--bg-alt);border-radius:8px;border:1px solid var(--border);">
+          <div style="font-family:var(--ff-display);font-size:1.1rem;color:var(--ink);margin-bottom:8px;">Что будет на встрече-знакомстве</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:12px;">
+            <li style="display:flex;gap:10px;font-size:0.9rem;color:var(--ink-mid);">
+              <span style="color:var(--ochre);">→</span> Расскажете о своей ситуации
+            </li>
+            <li style="display:flex;gap:10px;font-size:0.9rem;color:var(--ink-mid);">
+              <span style="color:var(--ochre);">→</span> Я задам пару уточняющих вопросов
+            </li>
+            <li style="display:flex;gap:10px;font-size:0.9rem;color:var(--ink-mid);">
+              <span style="color:var(--ochre);">→</span> Предложу формат, который подходит
+            </li>
+            <li style="display:flex;gap:10px;font-size:0.9rem;color:var(--ink-mid);">
+              <span style="color:var(--ochre);">→</span> Никакого давления — решение за вами
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RIGHT: form -->
+      <div>
+        <div class="contact-form">
+          <h3 style="font-family:var(--ff-display);font-size:1.5rem;color:var(--ink);margin-bottom:24px;">Оставить заявку</h3>
+
+          <!-- 
+            ИНСТРУКЦИЯ ПО ПОДКЛЮЧЕНИЮ ФОРМЫ:
+            1. Зарегистрируйтесь на formspree.io (бесплатно до 50 заявок/мес)
+            2. Создайте форму → получите action URL вида https://formspree.io/f/XXXXXXXX
+            3. Замените action="#" на ваш URL
+            4. Добавьте method="POST"
+          -->
+          <form action="#" method="POST" id="contactForm">
+            <div class="form-group">
+              <label for="name">Ваше имя</label>
+              <input type="text" id="name" name="name" placeholder="Как вас зовут?" required>
+            </div>
+            <div class="form-group">
+              <label for="contact">Telegram или Email</label>
+              <input type="text" id="contact" name="contact" placeholder="@username или email@mail.ru" required>
+            </div>
+            <div class="form-group">
+              <label for="topic">Тема запроса</label>
+              <select id="topic" name="topic">
+                <option value="">Выберите (необязательно)</option>
+                <option>Карьера / смена сферы</option>
+                <option>Отношения / развод</option>
+                <option>Поиск смысла / жизненный переход</option>
+                <option>Хочу попробовать экспресс-сессию</option>
+                <option>Другое</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Расскажите кратко о ситуации</label>
+              <textarea id="message" name="message" placeholder="2–3 предложения — чтобы я мог подготовиться к разговору. Необязательно."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+              Отправить заявку
+            </button>
+            <p class="form-note">Отвечаю в течение 24 часов · Данные не передаются третьим лицам</p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="../js/components.js"></script>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    // Если action="#" — показываем заглушку. Когда подключите Formspree — удалите этот блок.
+    if (this.action.includes('#')) {
+      e.preventDefault();
+      alert('Форма пока не подключена. Напишите напрямую в Telegram.');
+    }
+  });
+</script>
+</body>
+</html>
