@@ -9,6 +9,110 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Чек-лист болей: одна колонка на всю ширину, крупнее шрифт */
+    .pain-checklist {
+      display: block !important;
+    }
+    .pain-checklist .pains-col {
+      max-width: 720px;
+      margin: 0 auto 56px auto;
+    }
+    .pain-checklist .pains-col:last-child {
+      margin-bottom: 0;
+    }
+    .pain-checklist .pains-col h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      color: #C17F3E;
+      margin-bottom: 24px;
+    }
+    .pain-checklist .pains-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .pain-checklist .pains-col li {
+      font-size: 21px;
+      line-height: 1.5;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(30, 30, 30, 0.1);
+    }
+    .pain-checklist .pains-col li:last-child {
+      border-bottom: none;
+    }
+    @media (max-width: 640px) {
+      .pain-checklist .pains-col h3 { font-size: 24px; }
+      .pain-checklist .pains-col li { font-size: 17px; padding: 14px 0; }
+    }
+
+    /* Прайс: сессии/пакеты строкой, канал — отдельный блок */
+    .products-list {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .product-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(30, 30, 30, 0.12);
+    }
+    .product-row h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      margin: 0;
+      flex: 1 1 260px;
+    }
+    .product-row__duration {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      opacity: 0.6;
+    }
+    .product-row p {
+      margin: 0;
+      flex: 2 1 320px;
+      font-size: 15px;
+      opacity: 0.85;
+    }
+    .product-row__price {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      color: #C17F3E;
+      white-space: nowrap;
+    }
+    .telegram-channel-card {
+      max-width: 760px;
+      margin: 40px auto 0 auto;
+      padding: 28px 32px;
+      border: 1px solid rgba(193, 127, 62, 0.4);
+      border-radius: 4px;
+      background: rgba(193, 127, 62, 0.06);
+    }
+    .telegram-channel-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      margin: 0 0 8px 0;
+    }
+    .telegram-channel-card p {
+      margin: 0 0 12px 0;
+      font-size: 15px;
+      opacity: 0.85;
+    }
+    .telegram-channel-card .product-row__price {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 17px;
+      color: #C17F3E;
+    }
+    @media (max-width: 640px) {
+      .product-row { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
 <body id="top">
 
@@ -66,7 +170,7 @@
 <div class="cta-band">
   <div class="container">
     <h2>Не знаете, с чего начать?</h2>
-    <p>Ознакомительная встреча (15 минут) — бесплатно. Обсудим ваш запрос и решим, подходит ли формат.</p>
+    <p>Ознакомительная встреча (15 минут) — бесплатно. Пришлите ваш запрос, и мы решим, подходит ли формат.</p>
     <a href="https://t.me/tochka_perehoda_coach" class="btn btn-white">Записаться на ознакомительную встречу →</a>
   </div>
 </div>
@@ -139,23 +243,25 @@
       <span class="section-eyebrow">Возможно, вам знакомо</span>
       <h2>С чем чаще всего обращаются</h2>
     </div>
-    <div class="pains-grid">
+    <div class="pains-grid pain-checklist">
       <div class="pains-col">
         <h3>Личный трек</h3>
         <ul>
-          <li>Прежние решения больше не работают, а новых пока нет</li>
-          <li>Ощущение, что стоите на развилке, но не видите вариантов</li>
-          <li>Важное решение откладывается уже долго</li>
-          <li>Сложно понять, чего хотите на самом деле — вы или обстоятельства</li>
+          <li>Кажется, что все уже попробовал, а легче не стало?</li>
+          <li>Стоите на развилке — но вариантов не видно.</li>
+          <li>Важное решение откладывается уже который месяц?</li>
+          <li>Не понимаете, чего хотите на самом деле — вы или обстоятельства.</li>
+          <li>Смотрите на других и думаете: почему у них получается, а у меня нет?</li>
         </ul>
       </div>
       <div class="pains-col">
         <h3>Руководительский трек</h3>
         <ul>
-          <li>Сложно делегировать — проще сделать самому</li>
-          <li>Команда не слышит то, что вы хотите донести</li>
-          <li>Рост в должности, но неясно, как расти дальше</li>
-          <li>Много операционки, мало стратегии</li>
+          <li>Проще сделать самому, чем объяснять и потом переделывать?</li>
+          <li>Говорите вроде понятно — а команда слышит что-то своё.</li>
+          <li>Выросли в должности, а куда расти дальше — непонятно?</li>
+          <li>Целый день в операционке, а до стратегии руки не доходят.</li>
+          <li>Все вокруг говорят — вы хороший руководитель. А сами в этом не уверены?</li>
         </ul>
       </div>
     </div>
@@ -169,38 +275,35 @@
       <span class="section-eyebrow">Форматы и цены</span>
       <h2>Единый прайс для обоих треков</h2>
     </div>
-    <div class="products-grid">
-      <div class="product-card">
-        <h3>Ознакомительная встреча</h3>
-        <div class="product-card__duration">15 минут</div>
-        <p>Короткий разговор, чтобы обсудить запрос и решить, подходит ли формат.</p>
-        <div class="product-card__price">Бесплатно</div>
+    <div class="products-list">
+      <div class="product-row">
+        <h3>Ознакомительная встреча <span class="product-row__duration">· 15 минут</span></h3>
+        <p>Пришлите ваш запрос, и мы решим, подходит ли формат.</p>
+        <div class="product-row__price">Бесплатно</div>
       </div>
-      <div class="product-card">
-        <h3>Разовая сессия</h3>
-        <div class="product-card__duration">60 минут</div>
+      <div class="product-row">
+        <h3>Разовая сессия <span class="product-row__duration">· 60 минут</span></h3>
         <p>Полный разбор ситуации с выходом на конкретный план действий.</p>
-        <div class="product-card__price">9 000 ₽ / €100</div>
+        <div class="product-row__price">9 000 ₽ / €100</div>
       </div>
-      <div class="product-card">
-        <h3>Малый пакет</h3>
-        <div class="product-card__duration">4 сессии · 2 месяца</div>
+      <div class="product-row">
+        <h3>Малый пакет <span class="product-row__duration">· 4 сессии, 2 месяца</span></h3>
         <p>Для запроса, требующего нескольких встреч подряд.</p>
-        <div class="product-card__price">32 000 ₽ / €360</div>
+        <div class="product-row__price">32 000 ₽ / €360</div>
       </div>
-      <div class="product-card">
-        <h3>Расширенный пакет</h3>
-        <div class="product-card__duration">8 сессий · 4 месяца</div>
+      <div class="product-row">
+        <h3>Расширенный пакет <span class="product-row__duration">· 8 сессий, 4 месяца</span></h3>
         <p>Для более длительной работы над серьёзным переходом.</p>
-        <div class="product-card__price">61 000 ₽ / €680</div>
-      </div>
-      <div class="product-card">
-        <h3>Платный канал в Telegram</h3>
-        <div class="product-card__duration">1 месяц</div>
-        <p>Закрытое сообщество, разбор кейса дважды в месяц, ежемесячный Q&A.</p>
-        <div class="product-card__price">2 000 ₽</div>
+        <div class="product-row__price">61 000 ₽ / €680</div>
       </div>
     </div>
+
+    <div class="telegram-channel-card">
+      <h3>Платный канал в Telegram <span class="product-row__duration">· 1 месяц</span></h3>
+      <p>Закрытое сообщество, разбор кейса дважды в месяц, ежемесячный Q&A.</p>
+      <div class="product-row__price">2 000 ₽</div>
+    </div>
+
     <p class="pricing-note">Цены могут изменяться; на уже оплаченные услуги изменение не распространяется.</p>
   </div>
 </section>
